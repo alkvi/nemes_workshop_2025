@@ -133,7 +133,12 @@ disp(job)
 % Run the GLM.
 % Note that this creates a design matrix from the stimulus
 % with the HRF set according to job options. Default is 'Canonical'.
-SubjStats = job.run(hb(1)); 
+% Also there is a constant drift regressor added by default, but you can add 
+% polynomial and some others as well.
+SubjStats = job.run(hb); 
+
+% Also save the SubjStats to file
+save('SubjStats.mat','SubjStats');
 
 %% Visualize 1st level results
 
