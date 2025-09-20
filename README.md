@@ -4,7 +4,7 @@ Some basic analysis of an open dataset, in:
 
 - MNE-NIRS
 - NIRS Brain AnalyzIR toolbox
-- HomER3
+- Homer3
 
 # Downloading the repository
 
@@ -76,5 +76,48 @@ git clone https://github.com/huppertt/nirs-toolbox.git
 
 Add to MATLAB path via Home -> Set Path -> Add with subfolders -> select toolbox path.
 
-# HomER3
+Then open the `AnalyzIR_pipeline/AnalyzIR_pipeline.m` file and run it section by section.
+
+# Homer3
+
+You will need MATLAB to run this toolbox.
+
+Download the toolbox from the [Homer3 repository](https://github.com/BUNPC/Homer3).
+
+Either select Code -> Download zip, or run..
+
+~~~
+cd <your_desired_toolbox_path>
+git clone https://github.com/BUNPC/Homer3.git
+~~~
+
+Add to MATLAB path via Home -> Set Path -> Add with subfolders -> select toolbox path.
+
+We will basically follow the [BU neurophotonics tutorial](https://www.bu.edu/neurophotonics/files/2020/05/fNIRS_workshop_day1_BasicAnalysis.pdf).
+
+Note that My Homer3 had issues with date time format on my computer so I had to change `Homer3\DataTree\AcquiredData\DataFilesFileClass.m` line 93 to 0. Maybe you won't have to.
+
+This is GUI based. Steps to analyze the dataset:
+
+- Copy over the BIDS dataset to Homer3_pipeline
+
+- Start Homer3 by running the command `Homer3` in the MATLAB command window
+
+- Click cancel when it asks for a cfg file
+
+Now you can click on the montage on the right and inspect the time series data. To run preprocessing and analysis: 
+
+- Edit current processing stream (run level)
+
+- Add GLM
+
+- Save (save current processing stream)
+
+- Click Run
+
+- Wait for it to finish
+
+- Select the condition of interest
+
+- Now you can visualize the HRF
 
