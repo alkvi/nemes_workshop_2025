@@ -101,6 +101,8 @@ This is GUI based. Steps to analyze the dataset:
 
 - Copy over the BIDS dataset to Homer3_pipeline
 
+- In MATLAB, make sure the current directory _is in_ the BIDS dataset
+
 - Start Homer3 by running the command `Homer3` in the MATLAB command window
 
 - Click cancel when it asks for a cfg file
