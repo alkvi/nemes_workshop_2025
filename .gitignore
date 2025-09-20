@@ -2,3 +2,4 @@ data/*
 MNE_pipeline/.ipynb*
 MNE_pipeline/glm_data
 MNE_pipeline/mne_workshop
+*.asv
