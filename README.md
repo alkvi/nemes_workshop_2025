@@ -37,10 +37,16 @@ cd ..
 
 To run the MNE-NIRS pipeline you will need Python and a terminal window.
 
+First we will create a virtual Python environment to install modules to.
+
 ~~~
 cd MNE_pipeline
-py -m venv mne_workshop
+python -m venv mne_workshop
 ~~~
+
+This might also be `python3` instead of `python` if it doesn't find the command.
+
+Then we activate the environment.
 
 If on Windows:
 
@@ -54,10 +60,17 @@ If on Mac or Linux:
 source mne_workshop/bin/activate
 ~~~
 
-Then:
+Then we install the required libraries and start a notebook:
 
 ~~~
 pip install -r requirements.txt
+jupyter notebook
+~~~
+
+Note: if jupyter doesn't find the imports, you might have to install the virtual environment as a jupyter kernel. Then you can select it from the Kernel dropdown menu in Jupyter.
+
+~~~
+python -m ipykernel install --user --name=mne_workshop --display-name "Python (mne_workshop)"
 jupyter notebook
 ~~~
 
