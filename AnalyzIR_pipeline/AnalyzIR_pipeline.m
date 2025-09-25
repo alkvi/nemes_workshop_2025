@@ -163,7 +163,7 @@ j = nirs.modules.MixedEffects( );
 % the group mean for each condition.  There is also a random intercept for
 % each subject.  Google "matlab wilkinson notation" or see
 % <http://www.mathworks.com/help/stats/wilkinson-notation.html> for more examples.
-j.formula = 'beta ~ -1 + group:cond + (1|subject)';
+j.formula = 'beta ~ -1 + cond + (1|SubjectID)';
 j.dummyCoding = 'full';
 j.include_diagnostics=true;
 
