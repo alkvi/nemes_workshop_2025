@@ -1,4 +1,6 @@
-data/*
+data/rob-luke-BIDS*
+data/*.log
+data/BIDS*
 MNE_pipeline/.ipynb*
 MNE_pipeline/glm_data
 MNE_pipeline/mne_workshop
