@@ -63,7 +63,7 @@ source mne_workshop/bin/activate
 Then we install the required libraries and start a notebook:
 
 ~~~
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 jupyter notebook
 ~~~
 
